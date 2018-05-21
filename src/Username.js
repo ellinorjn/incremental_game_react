@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class Username extends Component{
     state = {
-        username: ''
+        username: '',
+        error: ''
     }
 
     handleUsername = (event) => {
@@ -19,9 +20,17 @@ class Username extends Component{
     }
 
     render(){
+        let errorMessage = null;
+        if(this.state.error){
+            errorMessage = <small id="emailHelp" className="form-text text-danger">{this.state.error}</small>;
+        }
+          let errorClass = 'form-group';
+          if(this.state.error){
+            errorClass = "form-group has-danger";
+          }
         return(
             <form onSubmit={this.handleSubmit}>
-                <div className="form-group">
+                <div className={ errorClass }>
                     <label forhtml="username">Username</label>
                     <input 
                         type="text" 
@@ -29,7 +38,9 @@ class Username extends Component{
                         id="username" 
                         placeholder="Username" 
                         onChange={this.handleUsername}
-                        value={this.state.username}/>
+                        value={this.state.username}
+                    />
+                    { errorMessage }
                 </div>
                 <button type="submit" className="btn btn-primary">Go!</button>
             </form>
