@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Username from './Username';
 import Counter from './Counter';
+import Autoclicker from './Autoclicker';
 
 class App extends Component {
 
@@ -27,6 +28,7 @@ class App extends Component {
         </header>
         { !this.state.loggedIn && <Username handleLogin={this.handleLogin} />}
         <Counter/>
+        <Autoclicker/>
       </div>
     );
   }
