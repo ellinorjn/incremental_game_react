@@ -8,7 +8,7 @@ class App extends Component {
 
   state = {
     loggedIn: false,
-    username: ''
+    username: '',
   }
 
   handleLogin = (username) => {
