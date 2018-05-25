@@ -36,29 +36,34 @@ class App extends Component {
     if(this.state.loggedIn){
       loggedInMessage = <p> Welcome {this.state.username}, let's play! </p>
     }
-
+    
+   
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">{ loggedInMessage }</h1>
         </header>
-        { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}
-        <p>Total amount of money: {this.state.counter} </p>
+        { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}       
 
-        <IncreaseClickValue 
-        handleCounterState={this.handleCounterState}
-        handleUpgradeCosts={this.handleUpgradeCosts}/>
+        { this.state.loggedIn &&
+        <div> 
+            <p>Total amount of money: {this.state.counter} </p>
+            <IncreaseClickValue 
+            handleCounterState={this.handleCounterState}
+            handleUpgradeCosts={this.handleUpgradeCosts}/>
 
-        <Counter
-        handleCounterState={this.handleCounterState} />
+            <Counter
+            handleCounterState={this.handleCounterState} />
 
-        <Autoclicker
-        handleCounterState={this.handleCounterState}
-        handleUpgradeCosts={this.handleUpgradeCosts}/>
+            <Autoclicker
+            handleCounterState={this.handleCounterState}
+            handleUpgradeCosts={this.handleUpgradeCosts}/>
 
-        <DiamondCultivation
-        handleCounterState={this.handleCounterState}
-        handleUpgradeCosts={this.handleUpgradeCosts}/>
+            <DiamondCultivation
+            handleCounterState={this.handleCounterState}
+            handleUpgradeCosts={this.handleUpgradeCosts}/>
+          </div>
+       }
         
       </div>
     );
