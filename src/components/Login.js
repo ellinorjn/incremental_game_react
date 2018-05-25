@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Username extends Component{
+class Login extends Component{
     state = {
         username: '',
         error: ''
@@ -48,4 +48,4 @@ class Username extends Component{
     }
 }
 
-export default Username;
+export default Login;
