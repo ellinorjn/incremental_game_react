@@ -4,6 +4,7 @@ import Login from './Login';
 import Counter from './Counter';
 import Autoclicker from './Autoclicker';
 import IncreaseClickValue from './IncreaseClickValue';
+import DiamondCultivation from './DiamondCultivation';
 
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
   state = {
     loggedIn: false,
     username: '',
-    counter: 10
+    counter: 0
   }
 
   handleLogin = (username) => {
@@ -43,12 +44,21 @@ class App extends Component {
         </header>
         { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}
         <p>Total amount of money: {this.state.counter} </p>
-        <IncreaseClickValue handleCounterState={this.handleCounterState}
-                            handleUpgradeCosts={this.handleUpgradeCosts}/>
-        <Counter      handleCounterState={this.handleCounterState} />
-        <Autoclicker  handleCounterState={this.handleCounterState}
-                      handleUpgradeCosts={this.handleUpgradeCosts}
-        />
+
+        <IncreaseClickValue 
+        handleCounterState={this.handleCounterState}
+        handleUpgradeCosts={this.handleUpgradeCosts}/>
+
+        <Counter
+        handleCounterState={this.handleCounterState} />
+
+        <Autoclicker
+        handleCounterState={this.handleCounterState}
+        handleUpgradeCosts={this.handleUpgradeCosts}/>
+
+        <DiamondCultivation
+        handleCounterState={this.handleCounterState}
+        handleUpgradeCosts={this.handleUpgradeCosts}/>
         
       </div>
     );
