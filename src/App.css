@@ -28,7 +28,11 @@
 }
 
 #diamond-hunter{
-  background: pink;
+  background-image: url('http://www.ict4us.com/r.kuijt/images/en_7dwarfs.gif');
+  background-repeat: no-repeat;
+    margin:0px auto;
+    height: 100px;
+    width: 100%;
 }
 
 #root > div > div > section{
