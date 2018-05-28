@@ -6,6 +6,7 @@ import Autoclicker from './Autoclicker';
 import IncreaseClickValue from './IncreaseClickValue';
 import DiamondCultivation from './DiamondCultivation';
 import DiamondHunter from './DiamondHunter';
+import ToggleUpgrades from './ToggleUpgrades';
 
 
 class App extends Component {
@@ -31,6 +32,8 @@ class App extends Component {
   handleCounterState =  (increaseValue) => {
     this.setState({counter: this.state.counter + increaseValue})
   }
+
+
 
   render() {
     let loggedInMessage = null;
@@ -67,6 +70,7 @@ class App extends Component {
             <DiamondHunter
             handleCounterState={this.handleCounterState}
             handleUpgradeCosts={this.handleUpgradeCosts}/>
+            <ToggleUpgrades/>
           </div>
        }
         

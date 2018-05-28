@@ -18,11 +18,14 @@ class IncreaseClickValue extends Component{
     render(){
         return(
             <div>
-                <ClickButton   level={this.state.increaseLevel}
-                               handleCounterState={this.props.handleCounterState}/><br/>
-                <button onClick={this.increaseClickValue}>
-                    Increase Click costs: {this.state.costIncreaseClickValue * (this.state.increaseLevel)}
-                </button><br/>
+                <ClickButton   
+                level={this.state.increaseLevel}
+                handleCounterState={this.props.handleCounterState}/><br/>
+                
+                <div className="increase-click-value" onClick={this.increaseClickValue}>
+                    <p>Increase Click costs: {this.state.costIncreaseClickValue * (this.state.increaseLevel)}</p>
+                    <p>Level {this.state.increaseLevel}</p>
+                </div>
             </div>
         )
 

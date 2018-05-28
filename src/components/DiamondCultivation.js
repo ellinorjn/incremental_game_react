@@ -25,9 +25,10 @@ class DiamondCultivation extends Component{
 
     render(){
         return(
-            <button onClick={this.fakeDiamondCultivation}>
-            Grow your own diamonds! costs: {this.state.costFakeDiamondCultivation * (this.state.fakeDiamondCultivationLevel)}
-            </button>
+            <div className="diamond-cultivation" onClick={this.fakeDiamondCultivation}>
+                <p>Grow your own diamonds! costs: {this.state.costFakeDiamondCultivation * (this.state.fakeDiamondCultivationLevel)}</p>
+                <p>Level {this.state.fakeDiamondCultivationLevel}</p>
+            </div>
         )
     }
 } 

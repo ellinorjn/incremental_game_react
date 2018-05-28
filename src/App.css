@@ -27,3 +27,32 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.auto-clicker{
+  background: lightblue;
+  cursor: pointer;
+}
+.increase-click-value{
+  background: lightgreen;
+  cursor: pointer;
+}
+
+.diamond-cultivation{
+  background: lightyellow;
+  cursor: pointer;
+}
+.diamond-hunter{
+  background: pink;
+  cursor: pointer;
+}
+
+section {
+  width: 10rem;
+  height: 10rem;
+  opacity: 1;
+  transition: all 300ms;
+}
+
+.hide {
+  opacity: 0;
+}

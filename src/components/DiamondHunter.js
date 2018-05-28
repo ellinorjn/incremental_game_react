@@ -17,16 +17,17 @@ class DiamondHunter extends Component{
 
     diamondHunterInterval = () => {
         this.interval = setInterval(()=>{
-            let increaseValue = this.state.diamondHunterLevel -1;
+            let increaseValue = this.state.diamondHunterLevel + 2;
             this.props.handleCounterState(increaseValue)
         }, 1000)
     }
 
     render(){
         return(
-            <button onClick={this.diamondHunter}>
-            HUNTER costs: {this.state.costDiamondHunter * (this.state.diamondHunterLevel)}
-            </button>
+            <div className="diamond-hunter" onClick={this.diamondHunter}>
+                <p>Hire a dwarf costs: {this.state.costDiamondHunter * (this.state.diamondHunterLevel)}</p>
+                <p>Level {this.state.diamondHunterLevel}</p> 
+            </div>
         )
     }
 }

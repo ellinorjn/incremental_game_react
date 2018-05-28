@@ -24,9 +24,10 @@ class Autoclicker extends Component {
     render(){
         return(
             <div>
-                <button onClick={this.autoClicker}>
-                    Auto clicker costs: {this.state.costAutoClicker * (this.state.autoClickLevel)}
-                </button><br/>
+                <div className="auto-clicker" onClick={this.autoClicker}>
+                    <p>Auto clicker costs: {this.state.costAutoClicker * (this.state.autoClickLevel)} </p>
+                    <p>Level {this.state.autoClickLevel}</p>
+                </div>
             </div>
         )
     }
