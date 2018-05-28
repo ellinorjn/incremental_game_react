@@ -30,10 +30,6 @@ class DiamondCultivation extends Component{
             </button>
         )
     }
-
-
 } 
-
- 
 
 export default DiamondCultivation;
