@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import '../App.css';
+import UpgradeContainer from './UpgradeContainer'
 import Login from './Login';
-import Counter from './Counter';
 import Autoclicker from './Autoclicker';
 import IncreaseClickValue from './IncreaseClickValue';
 import DiamondCultivation from './DiamondCultivation';
 import DiamondHunter from './DiamondHunter';
-import ToggleUpgrades from './ToggleUpgrades';
 
 
 class App extends Component {
@@ -33,15 +32,12 @@ class App extends Component {
     this.setState({counter: this.state.counter + increaseValue})
   }
 
-
-
   render() {
     let loggedInMessage = null;
     if(this.state.loggedIn){
       loggedInMessage = <p> Welcome {this.state.username}, let's play! </p>
     }
     
-   
     return (
       <div className="App">
         <header className="App-header">
@@ -52,25 +48,28 @@ class App extends Component {
         { this.state.loggedIn &&
         <div> 
             <p>Total amount of diamonds: {this.state.counter} </p>
-            <IncreaseClickValue 
-            handleCounterState={this.handleCounterState}
-            handleUpgradeCosts={this.handleUpgradeCosts}/>
 
-            <Counter
-            handleCounterState={this.handleCounterState} />
+            <UpgradeContainer>
+              <IncreaseClickValue 
+              handleCounterState={this.handleCounterState}
+              handleUpgradeCosts={this.handleUpgradeCosts}
+              counter={this.state.counter}/>
 
-            <Autoclicker
-            handleCounterState={this.handleCounterState}
-            handleUpgradeCosts={this.handleUpgradeCosts}/>
+              <Autoclicker
+              handleCounterState={this.handleCounterState}
+              handleUpgradeCosts={this.handleUpgradeCosts}
+              counter={this.state.counter}/>
 
-            <DiamondCultivation
-            handleCounterState={this.handleCounterState}
-            handleUpgradeCosts={this.handleUpgradeCosts}/>
+              <DiamondCultivation
+              handleCounterState={this.handleCounterState}
+              handleUpgradeCosts={this.handleUpgradeCosts}
+              counter={this.state.counter}/>
 
-            <DiamondHunter
-            handleCounterState={this.handleCounterState}
-            handleUpgradeCosts={this.handleUpgradeCosts}/>
-            <ToggleUpgrades/>
+              <DiamondHunter
+              handleCounterState={this.handleCounterState}
+              handleUpgradeCosts={this.handleUpgradeCosts}
+              counter={this.state.counter}/>
+            </UpgradeContainer>
           </div>
        }
         

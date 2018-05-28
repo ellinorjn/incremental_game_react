@@ -2,15 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 100px;
+  padding: 30px;
   color: white;
 }
 
@@ -19,40 +14,33 @@
   float:right;
 }
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.auto-clicker{
+/* Upgrades */
+#auto-clicker{
   background: lightblue;
-  cursor: pointer;
 }
-.increase-click-value{
+#increase-click-value{
   background: lightgreen;
-  cursor: pointer;
 }
 
-.diamond-cultivation{
+#diamond-cultivation{
   background: lightyellow;
-  cursor: pointer;
 }
-.diamond-hunter{
+
+#diamond-hunter{
   background: pink;
-  cursor: pointer;
 }
 
-section {
-  width: 10rem;
-  height: 10rem;
+#root > div > div > section{
+  float:right;
+  width: 50%;
+}
+
+.toggle-upgrade-false{
+  opacity: 0.5;
+}
+
+.toggle-upgrade-true{
   opacity: 1;
-  transition: all 300ms;
-}
-
-.hide {
-  opacity: 0;
+  cursor: pointer;
 }

@@ -24,11 +24,12 @@ class DiamondCultivation extends Component{
 
 
     render(){
+        let costButton =  this.state.costFakeDiamondCultivation * (this.state.fakeDiamondCultivationLevel);
         return(
-            <div className="diamond-cultivation" onClick={this.fakeDiamondCultivation}>
+            <button id="diamond-cultivation" className={this.props.counter >= costButton ? "toggle-upgrade-true" : "toggle-upgrade-false"}onClick={this.fakeDiamondCultivation}>
                 <p>Grow your own diamonds! costs: {this.state.costFakeDiamondCultivation * (this.state.fakeDiamondCultivationLevel)}</p>
                 <p>Level {this.state.fakeDiamondCultivationLevel}</p>
-            </div>
+            </button>
         )
     }
 } 

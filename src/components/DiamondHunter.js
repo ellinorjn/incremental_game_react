@@ -23,11 +23,12 @@ class DiamondHunter extends Component{
     }
 
     render(){
+        let costButton =  this.state.costDiamondHunter * (this.state.diamondHunterLevel);
         return(
-            <div className="diamond-hunter" onClick={this.diamondHunter}>
+            <button id="diamond-hunter" className={this.props.counter >= costButton ? "toggle-upgrade-true" : "toggle-upgrade-false" } onClick={this.diamondHunter}>
                 <p>Hire a dwarf costs: {this.state.costDiamondHunter * (this.state.diamondHunterLevel)}</p>
                 <p>Level {this.state.diamondHunterLevel}</p> 
-            </div>
+            </button>
         )
     }
 }

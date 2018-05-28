@@ -22,16 +22,16 @@ class Autoclicker extends Component {
         
     
     render(){
+        let costButton =  this.state.costAutoClicker * (this.state.autoClickLevel);
         return(
             <div>
-                <div className="auto-clicker" onClick={this.autoClicker}>
+                <button id="auto-clicker" className={this.props.counter >= costButton ? "toggle-upgrade-true" : "toggle-upgrade-false"} onClick={this.autoClicker}>
                     <p>Auto clicker costs: {this.state.costAutoClicker * (this.state.autoClickLevel)} </p>
                     <p>Level {this.state.autoClickLevel}</p>
-                </div>
+                </button>
             </div>
         )
     }
-
 }
 
 export default Autoclicker;

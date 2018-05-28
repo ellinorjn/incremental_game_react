@@ -16,16 +16,17 @@ class IncreaseClickValue extends Component{
     };
 
     render(){
+        let costButton = this.state.costIncreaseClickValue * (this.state.increaseLevel);
         return(
             <div>
                 <ClickButton   
                 level={this.state.increaseLevel}
                 handleCounterState={this.props.handleCounterState}/><br/>
                 
-                <div className="increase-click-value" onClick={this.increaseClickValue}>
-                    <p>Increase Click costs: {this.state.costIncreaseClickValue * (this.state.increaseLevel)}</p>
+                <button id="increase-click-value"className={this.props.counter >= costButton ? "toggle-upgrade-true" : "toggle-upgrade-false"} onClick={this.increaseClickValue}>
+                    <p>Increase Click costs: {costButton}</p>
                     <p>Level {this.state.increaseLevel}</p>
-                </div>
+                </button>
             </div>
         )
 
@@ -33,7 +34,7 @@ class IncreaseClickValue extends Component{
 }
 export default IncreaseClickValue;
 
-
+//className="increase-click-value"
 /*
 increaseClickValue = () => {
     if(this.state.counter >= this.state.costIncreaseClickValue){
