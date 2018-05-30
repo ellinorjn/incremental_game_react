@@ -14,6 +14,7 @@ class Autoclicker extends Component {
             }
     };
     autoClickInterval = () => {
+        clearInterval(this.interval);
         this.interval = setInterval(() => {
             let increaseValue = this.state.autoClickLevel - 1;
             this.props.handleCounterState(increaseValue)
@@ -25,9 +26,12 @@ class Autoclicker extends Component {
         let costButton =  this.state.costAutoClicker * (this.state.autoClickLevel);
         return(
             <div>
-                <button id="auto-clicker" className={this.props.counter >= costButton ? "toggle-upgrade-true" : "toggle-upgrade-false"} onClick={this.autoClicker}>
-                    <p>Auto clicker costs: {this.state.costAutoClicker * (this.state.autoClickLevel)} </p>
-                    <p>Level {this.state.autoClickLevel}</p>
+                <button id="auto-clicker" disabled={this.props.counter < costButton} onClick={this.autoClicker}>
+                    <div className="tool-tip">
+                        <h2 className="upgrade">Robot {this.state.costAutoClicker * (this.state.autoClickLevel)} </h2>
+                        <span className="tool-tip-text">A robot inside the hen house picking upp eggs</span>
+                    </div>
+                    <p className="level">{this.state.autoClickLevel}</p>
                 </button>
             </div>
         )

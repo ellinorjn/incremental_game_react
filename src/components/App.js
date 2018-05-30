@@ -4,8 +4,8 @@ import UpgradeContainer from './UpgradeContainer'
 import Login from './Login';
 import Autoclicker from './Autoclicker';
 import IncreaseClickValue from './IncreaseClickValue';
-import DiamondCultivation from './DiamondCultivation';
-import DiamondHunter from './DiamondHunter';
+import Laboratory from './Laboratory';
+import EggFactory from './EggFactory';
 
 
 class App extends Component {
@@ -47,9 +47,9 @@ class App extends Component {
 
         { this.state.loggedIn &&
         <div> 
-            <p>Total amount of diamonds: {this.state.counter} </p>
+            <p>You have collected {this.state.counter} eggs </p>
 
-            <UpgradeContainer>
+            
               <IncreaseClickValue 
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
@@ -60,16 +60,16 @@ class App extends Component {
               handleUpgradeCosts={this.handleUpgradeCosts}
               counter={this.state.counter}/>
 
-              <DiamondCultivation
+              <Laboratory
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
               counter={this.state.counter}/>
 
-              <DiamondHunter
+              <EggFactory
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
               counter={this.state.counter}/>
-            </UpgradeContainer>
+           
           </div>
        }
         

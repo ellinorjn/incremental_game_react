@@ -13,26 +13,31 @@
   font-size: 1.5em;
   float:right;
 }
-
-
 /* Upgrades */
+
+#auto-clicker, #increase-click-value, #laboratory, #egg-factory{
+  float: right;
+  width:30%;
+  margin-top: 5px;
+  border:none;
+  cursor: pointer;
+}
 #auto-clicker{
   background: lightblue;
+  
 }
 #increase-click-value{
   background: lightgreen;
+ 
 }
 
-#diamond-cultivation{
+#laboratory{
   background: lightyellow;
+  
 }
 
-#diamond-hunter{
-  background-image: url('http://www.ict4us.com/r.kuijt/images/en_7dwarfs.gif');
-  background-repeat: no-repeat;
-    margin:0px auto;
-    height: 100px;
-    width: 100%;
+#egg-factory{
+ background:lightpink;
 }
 
 #root > div > div > section{
@@ -47,4 +52,86 @@
 .toggle-upgrade-true{
   opacity: 1;
   cursor: pointer;
+}
+
+.test{
+  background-image:url('https://vignette.wikia.nocookie.net/mlp/images/6/66/Chicken_coop_S4E13.png/revision/latest?cb=20140210160121');
+  background-repeat: no-repeat;
+  float:left;
+  height: 600px;
+  width:70%;
+}
+
+.click-button{
+  background:inherit;
+  background-image:url(./images/hen.png);
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 350px;
+  border: none;
+  padding: 0;
+  float:left;
+  margin-top:100px;
+  margin-left: 50px;
+  cursor:pointer;
+}
+
+.upgrade{
+  width: 50%;
+  float:left;
+  font-size: 1.5em;
+  text-align:left;
+  margin:5px;
+}
+
+.level{
+  width:20%;
+  float:right;
+  margin: 5px;
+}
+
+/* Tooltip container */
+.tool-tip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tool-tip .tool-tip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tool-tip .tool-tip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tool-tip:hover .tool-tip-text {
+  visibility: visible;
+  opacity: 1;
 }
