@@ -31,7 +31,7 @@ class Autoclicker extends Component {
                         <h2 className="upgrade">Robot {this.state.costAutoClicker * (this.state.autoClickLevel)} </h2>
                         <span className="tool-tip-text">A robot inside the hen house picking upp eggs</span>
                     </div>
-                    <p className="level">{this.state.autoClickLevel}</p>
+                    <h3 className="level">{this.state.autoClickLevel -1}</h3>
                 </button>
             </div>
         )

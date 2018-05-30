@@ -32,7 +32,7 @@ class Laboratory extends Component{
                     <h2 className="upgrade">Laboratory {this.state.costLaboratory * (this.state.laboratoryLevel)}</h2>
                     <span className="tool-tip-text">A laboratory that creates fake eggs worth more than real ones</span>
                 </div>
-                <p className="level">{this.state.laboratoryLevel}</p>
+                <h3 className="level">{this.state.laboratoryLevel -1}</h3>
             </button>
         )
     }

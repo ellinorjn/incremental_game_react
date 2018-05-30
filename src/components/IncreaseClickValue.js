@@ -28,7 +28,7 @@ class IncreaseClickValue extends Component{
                         <h2 className="upgrade">New gloves {costButton}</h2>
                         <span className="tool-tip-text">You'll get more eggs on every click on the hen</span>
                     </div>
-                    <p className="level">{this.state.increaseLevel}</p>
+                    <h3 className="level">{this.state.increaseLevel -1}</h3>
                 </button>
             </div>
         )

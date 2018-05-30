@@ -13,6 +13,10 @@
   font-size: 1.5em;
   float:right;
 }
+
+h3{
+  font-size: 1.4em;
+}
 /* Upgrades */
 
 #auto-clicker, #increase-click-value, #laboratory, #egg-factory{
@@ -55,7 +59,7 @@
 }
 
 .test{
-  background-image:url('https://vignette.wikia.nocookie.net/mlp/images/6/66/Chicken_coop_S4E13.png/revision/latest?cb=20140210160121');
+  background-image:url(images/hen-coop.png);
   background-repeat: no-repeat;
   float:left;
   height: 600px;
@@ -76,6 +80,10 @@
   cursor:pointer;
 }
 
+.click-button:focus{
+  outline:none;
+}
+
 .upgrade{
   width: 50%;
   float:left;
@@ -94,6 +102,7 @@
 .tool-tip {
   position: relative;
   display: inline-block;
+  margin: 0px;
 }
 
 /* Tooltip text */

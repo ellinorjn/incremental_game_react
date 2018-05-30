@@ -31,7 +31,7 @@ class EggFactory extends Component{
                     <h2 className="upgrade">Factory {this.state.costEggFactory * (this.state.eggFactoryLevel)}</h2>
                     <span className="tool-tip-text">A factory that creates lots of eggs every second</span>
                 </div>
-                <p className="level">{this.state.eggFactoryLevel - 1}</p> 
+                <h3 className="level">{this.state.eggFactoryLevel - 1}</h3> 
             </button>
         )
     }
