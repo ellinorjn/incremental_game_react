@@ -14,22 +14,30 @@
   float:right;
 }
 
+
 h3{
   font-size: 1.4em;
+  margin: 10px;
 }
+
+
 /* Upgrades */
 
-#auto-clicker, #increase-click-value, #laboratory, #egg-factory{
+#auto-clicker, #increase-click-value, #laboratory, #egg-factory, #hen-house{
   float: right;
-  width:30%;
+  width:40%;
+  height: 100px;
   margin-top: 5px;
   border:none;
   cursor: pointer;
+  text-align:left;
 }
+
 #auto-clicker{
   background: lightblue;
-  
+
 }
+
 #increase-click-value{
   background: lightgreen;
  
@@ -49,21 +57,12 @@ h3{
   width: 50%;
 }
 
-.toggle-upgrade-false{
-  opacity: 0.5;
-}
-
-.toggle-upgrade-true{
-  opacity: 1;
-  cursor: pointer;
-}
-
 .test{
   background-image:url(images/hen-coop.png);
   background-repeat: no-repeat;
   float:left;
-  height: 600px;
-  width:70%;
+  height: 700px;
+  width:100%;
 }
 
 .click-button{
@@ -75,9 +74,15 @@ h3{
   border: none;
   padding: 0;
   float:left;
-  margin-top:100px;
-  margin-left: 50px;
+  margin-top:240px;
+  
   cursor:pointer;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.click-button img:hover{
+  height: 600px;
 }
 
 .click-button:focus{
@@ -85,24 +90,24 @@ h3{
 }
 
 .upgrade{
-  width: 50%;
-  float:left;
   font-size: 1.5em;
   text-align:left;
   margin:5px;
 }
 
+
 .level{
   width:20%;
   float:right;
-  margin: 5px;
+  padding: 10px;
 }
 
 /* Tooltip container */
 .tool-tip {
   position: relative;
   display: inline-block;
-  margin: 0px;
+  margin-top: 10px;
+  width: 200px;
 }
 
 /* Tooltip text */
@@ -119,7 +124,7 @@ h3{
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
+  left: 30%;
   margin-left: -60px;
 
   /* Fade in tooltip */
@@ -143,4 +148,12 @@ h3{
 .tool-tip:hover .tool-tip-text {
   visibility: visible;
   opacity: 1;
+}
+
+button:disabled{
+  background-color: red;
+}
+
+.bajs{
+  margin-right: 50px;
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
-import UpgradeContainer from './UpgradeContainer'
 import Login from './Login';
 import Autoclicker from './Autoclicker';
 import IncreaseClickValue from './IncreaseClickValue';
+import HenHouse from './HenHouse';
 import Laboratory from './Laboratory';
 import EggFactory from './EggFactory';
 
@@ -46,16 +46,21 @@ class App extends Component {
         { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}       
 
         { this.state.loggedIn &&
-        <div> 
-            <p>You have collected {this.state.counter} eggs </p>
+        <div className="test"> 
+            <h2>You have collected {this.state.counter} eggs </h2>
 
-            
+            <div class="bajs">
               <IncreaseClickValue 
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
               counter={this.state.counter}/>
 
               <Autoclicker
+              handleCounterState={this.handleCounterState}
+              handleUpgradeCosts={this.handleUpgradeCosts}
+              counter={this.state.counter}/>
+
+              <HenHouse
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
               counter={this.state.counter}/>
@@ -69,6 +74,7 @@ class App extends Component {
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
               counter={this.state.counter}/>
+              </div>
            
           </div>
        }
