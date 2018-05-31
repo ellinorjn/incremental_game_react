@@ -13,6 +13,10 @@
   font-size: 1.5em;
   float:right;
 }
+h2{
+  text-align:right;
+  width:90%;
+}
 
 
 h3{
@@ -24,10 +28,10 @@ h3{
 /* Upgrades */
 
 #auto-clicker, #increase-click-value, #laboratory, #egg-factory, #hen-house{
-  float: right;
-  width:40%;
+  float: left;
+  width: 30%;
   height: 100px;
-  margin-top: 5px;
+  margin-bottom: 5px;
   border:none;
   cursor: pointer;
   text-align:left;
@@ -60,9 +64,9 @@ h3{
 .test{
   background-image:url(images/hen-coop.png);
   background-repeat: no-repeat;
-  float:left;
   height: 700px;
-  width:100%;
+  width:70%;
+  float:right;
 }
 
 .click-button{
@@ -73,12 +77,13 @@ h3{
   width: 350px;
   border: none;
   padding: 0;
-  float:left;
-  margin-top:240px;
-  
+  float:right;
+  margin-top:140px;
   cursor:pointer;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+}
+
+.click-button:active{
+  background-size: 90%;
 }
 
 .click-button img:hover{

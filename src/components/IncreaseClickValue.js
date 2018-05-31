@@ -25,10 +25,10 @@ class IncreaseClickValue extends Component{
                 
                 <button className="increase-click-button" id="increase-click-value"disabled={this.props.counter < costButton} onClick={this.increaseClickValue}>
                     <div className="tool-tip">
-                        <h2 className="upgrade">New gloves {costButton}</h2>
+                        <h3 className="upgrade">New gloves {costButton}</h3>
                         <span className="tool-tip-text">You'll get more eggs on every click on the hen</span>
                     </div>
-                    <h3 className="level">{this.state.increaseLevel -1}</h3>
+                    <h4 className="level">{this.state.increaseLevel -1}</h4>
                 </button>
             </div>
         )

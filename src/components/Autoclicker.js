@@ -28,10 +28,10 @@ class Autoclicker extends Component {
             <div>
                 <button id="auto-clicker" disabled={this.props.counter < costButton} onClick={this.autoClicker}>
                     <div className="tool-tip">
-                        <h2 className="upgrade">Robot {this.state.costAutoClicker * (this.state.autoClickLevel)} </h2>
+                        <h3 className="upgrade">Robot {this.state.costAutoClicker * (this.state.autoClickLevel)} </h3>
                         <span className="tool-tip-text">A robot inside the hen house picking upp eggs</span>
                     </div>
-                    <h3 className="level">{this.state.autoClickLevel -1}</h3>
+                    <h4 className="level">{this.state.autoClickLevel -1}</h4>
                 </button>
             </div>
         )

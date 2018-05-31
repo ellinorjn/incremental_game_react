@@ -46,10 +46,10 @@ class App extends Component {
         { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}       
 
         { this.state.loggedIn &&
-        <div className="test"> 
+        <div className=""> 
             <h2>You have collected {this.state.counter} eggs </h2>
 
-            <div class="bajs">
+            <div className="bajs">
               <IncreaseClickValue 
               handleCounterState={this.handleCounterState}
               handleUpgradeCosts={this.handleUpgradeCosts}
