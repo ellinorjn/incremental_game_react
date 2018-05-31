@@ -25,7 +25,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">{ loggedInMessage }</h1>
         </header>
-        
+      
         { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}       
         { this.state.loggedIn && <GameView />}
       </div>

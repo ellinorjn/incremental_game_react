@@ -20,8 +20,7 @@ class Autoclicker extends Component {
             this.props.handleCounterState(increaseValue)
             }, 3000);
     };
-        
-    
+          
     render(){
         let costButton =  this.state.costAutoClicker * (this.state.autoClickLevel);
         return(

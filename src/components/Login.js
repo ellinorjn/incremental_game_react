@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginInfo from './LoginInfo';
 
 class Login extends Component{
     state = {
@@ -21,14 +22,19 @@ class Login extends Component{
 
     render(){
         let errorMessage = null;
-        if(this.state.error){
-            errorMessage = <small id="emailHelp" className="form-text text-danger">{this.state.error}</small>;
-        }
-          let errorClass = 'form-group';
-          if(this.state.error){
-            errorClass = "form-group has-danger";
-          }
+            if(this.state.error){
+                errorMessage = <small className="form-text text-danger">{this.state.error}</small>;
+            }
+        
+        let errorClass = 'form-group';
+            if(this.state.error){
+                errorClass = "form-group has-danger";
+            }
         return(
+            <React.Fragment>
+                <LoginInfo />
+            
+
             <form onSubmit={this.handleSubmit}>
                 <div className={ errorClass }>
                     <label forhtml="username">Username</label>
@@ -42,8 +48,10 @@ class Login extends Component{
                     />
                     { errorMessage }
                 </div>
-                <button type="submit" className="btn btn-primary">Go!</button>
+                
+                <button type="submit" className="btn btn-primary">Start game!</button>
             </form>
+            </React.Fragment>
         );
     }
 }

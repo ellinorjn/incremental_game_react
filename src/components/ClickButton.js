@@ -5,7 +5,7 @@ function ClickButton(props){
     return(
         <div className="background">
             <div className="clickDiv">
-                <button className="click-button" onClick={() => props.handleCounterState(increaseValue)}>click me</button>
+                <button className="click-button" onClick={() => props.handleCounterState(increaseValue)}></button>
             </div>
         </div>
     );
