@@ -18,19 +18,24 @@ class IncreaseClickValue extends Component{
     render(){
         let costButton = this.state.costIncreaseClickValue * (this.state.increaseLevel);
         return(
-            <div>
+            <React.Fragment>
                 <ClickButton   
                     level={this.state.increaseLevel}
                     handleCounterState={this.props.handleCounterState}/>
                 
                 <button className="increase-click-button" id="increase-click-value"disabled={this.props.counter < costButton} onClick={this.increaseClickValue}>
                     <div className="tool-tip">
-                        <h3 className="upgrade">New gloves {costButton}</h3>
+                        <h3 className="upgrade">
+                        
+                            <img src="http://www.clker.com/cliparts/Z/6/B/Y/s/N/pointer-finger-hi.png" />
+                            Cursor {costButton}
+                        
+                        </h3>
                         <span className="tool-tip-text">You'll get more eggs on every click on the hen</span>
                     </div>
                     <h4 className="level">{this.state.increaseLevel -1}</h4>
                 </button>
-            </div>
+            </React.Fragment>
         )
     }
 }

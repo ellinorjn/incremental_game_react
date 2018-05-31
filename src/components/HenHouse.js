@@ -28,7 +28,9 @@ class HenHouse extends Component{
         return(
             <button disabled={this.props.counter < costButton} id="hen-house" onClick={this.henHouse}>
                 <div className="tool-tip">
-                    <h3 className="upgrade">Hen house {this.state.costHenHouse * (this.state.henHouseLevel)}</h3>
+                    <h3 className="upgrade">
+                    <img src="https://vignette.wikia.nocookie.net/scribblenauts/images/b/ba/Hut_Of_Death.png/revision/latest?cb=20130303155216" />
+                    Hen house {this.state.costHenHouse * (this.state.henHouseLevel)}</h3>
                     <span className="tool-tip-text">A factory that creates lots of eggs every second</span>
                 </div>
                 <h4 className="level">{this.state.henHouseLevel - 1}</h4> 

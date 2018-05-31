@@ -25,9 +25,11 @@ class GameView extends Component{
     render(){
         return(
             <div className=""> 
-                <h2>You have collected {this.state.counter} eggs </h2>
     
-                <div className="bajs">
+              
+
+                
+                <h2>You have collected {this.state.counter} eggs </h2>
                     <IncreaseClickValue 
                     handleCounterState={this.handleCounterState}
                     handleUpgradeCosts={this.handleUpgradeCosts}
@@ -53,7 +55,7 @@ class GameView extends Component{
                     handleUpgradeCosts={this.handleUpgradeCosts}
                     counter={this.state.counter}/>
                 </div>
-            </div>
+           
         );
     }    
 }

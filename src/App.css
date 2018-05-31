@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color:#ffcb62;
   height: 100px;
   padding: 30px;
   color: white;
@@ -13,23 +13,27 @@
   font-size: 1.5em;
   float:right;
 }
-h2{
-  text-align:right;
-  width:90%;
+
+h4{
+  font-size: 1.4em;
 }
 
-
-h3{
-  font-size: 1.4em;
-  margin: 10px;
+form{
+  background-image: url('http://www.clker.com/cliparts/Z/6/B/Y/s/N/pointer-finger-hi.png');
+  height: 1000px;
+  width: 1000px;
+}
+.form-group{
+  width: 50%;
+  margin: 0px auto;
 }
 
 
 /* Upgrades */
 
 #auto-clicker, #increase-click-value, #laboratory, #egg-factory, #hen-house{
-  float: left;
-  width: 30%;
+  float: right;
+  width: 50%;
   height: 100px;
   margin-bottom: 5px;
   border:none;
@@ -37,23 +41,33 @@ h3{
   text-align:left;
 }
 
-#auto-clicker{
-  background: lightblue;
-
-}
-
 #increase-click-value{
-  background: lightgreen;
- 
+  background: #ffd000;
 }
+
+#auto-clicker{
+  background:#ffaa00;
+
+}
+
+#hen-house{
+  background:#ff8800;
+}
+
+
 
 #laboratory{
-  background: lightyellow;
+  background:#ff6600;
   
 }
 
 #egg-factory{
- background:lightpink;
+  background:#ff5100;
+}
+
+button:disabled{
+  opacity: 0.5;
+  color: black;
 }
 
 #root > div > div > section{
@@ -61,29 +75,36 @@ h3{
   width: 50%;
 }
 
-.test{
-  background-image:url(images/hen-coop.png);
+.background{
+  background-image:url('http://seminoleelementary.com/wp-content/uploads/2017/06/pics-photos-sunburst-sunburst-background-yellow-sunburst-yellow-6.jpeg');
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  height: 700px;
-  width:70%;
-  float:right;
+  float:left;
+  width: 50%;
 }
 
 .click-button{
-  background:inherit;
+  background: inherit;
   background-image:url(./images/hen.png);
   background-repeat: no-repeat;
-  height: 450px;
-  width: 350px;
   border: none;
   padding: 0;
-  float:right;
-  margin-top:140px;
-  cursor:pointer;
+  width: 100%;
+  height:100%;
+  cursor: pointer;
+  
+}
+
+.clickDiv{
+  height: 100vh;
+  width: 50%;
+  text-align:center;
+  margin: 0px auto;
+  
 }
 
 .click-button:active{
-  background-size: 90%;
+  background-size: 80%;
 }
 
 .click-button img:hover{
@@ -100,9 +121,15 @@ h3{
   margin:5px;
 }
 
+.upgrade img{
+  height: 50px;
+  background: inherit;
+  margin: 2px;
+}
+
 
 .level{
-  width:20%;
+  width:10%;
   float:right;
   padding: 10px;
 }
@@ -111,8 +138,7 @@ h3{
 .tool-tip {
   position: relative;
   display: inline-block;
-  margin-top: 10px;
-  width: 200px;
+  width: 250px;
 }
 
 /* Tooltip text */
@@ -128,7 +154,7 @@ h3{
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
-  bottom: 125%;
+  bottom: 90%;
   left: 30%;
   margin-left: -60px;
 
@@ -155,10 +181,7 @@ h3{
   opacity: 1;
 }
 
-button:disabled{
-  background-color: red;
-}
 
-.bajs{
-  margin-right: 50px;
-}
+
+
+
