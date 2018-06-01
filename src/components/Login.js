@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginInfo from './LoginInfo';
+import SubmitButton from './SubmitButton';
 
 class Login extends Component{
     state = {
@@ -35,7 +36,6 @@ class Login extends Component{
                 <LoginInfo />
                 <form onSubmit={this.handleSubmit}>
                     <div className={ errorClass }>
-                        <label forhtml="username">Username</label>
                         <input 
                             type="text" 
                             className="form-control" 
@@ -46,8 +46,7 @@ class Login extends Component{
                         />
                         { errorMessage }
                     </div>
-                    
-                    <button type="submit" className="btn btn-primary">Start game!</button>
+                    <SubmitButton/> 
                 </form>
             </React.Fragment>
         );

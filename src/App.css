@@ -1,11 +1,16 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 .App {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 
 .App-header {
-  background-color:#ffcb62;
+  background-color:#ffc041;
   height: 100px;
   padding: 30px;
   color: white;
@@ -13,12 +18,19 @@
 
 .App-title {
   font-size: 2em;
+  font-weight: bold;
   float:right;
 }
 
-h2{
-  width: 50%;
+.start-page{
+  width:50%;
+  margin: 0px auto;
 }
+
+h1{
+  font-weight: bold;
+}
+
 h3{
   font-family: 'Raleway', sans-serif;
 }
@@ -28,12 +40,25 @@ h4{
   font-family: 'Raleway', sans-serif;
 }
 
+.collectedEggs{
+  width: 60%;
+  float:left;
+  padding: 10px;
+}
+
+.upgrades{
+  float:right;
+  width:40%;
+  padding:10px;
+}
+
 .form-group{
   width: 50%;
   margin: 0px auto;
 }
 
 .btn-primary {
+  margin-top: 10px;
   color: #fff;
   background-color: #ffcb62;
   border-color: #ffcb62;
@@ -42,6 +67,18 @@ h4{
 .btn-primary:hover{
   background-color: #ffab02;
   border-color: #ffab02;
+}
+.form-control:focus{
+  border-color: #ffab02;
+}
+
+.login-info{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#root > div > div > form > div > label{
+  font-size: 1.2em;
 }
 
 /* Upgrades */
@@ -53,28 +90,28 @@ h4{
   border: none;
   cursor: pointer;
   text-align:left;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-bottom: 5px;
 }
 
+#auto-clicker:focus, #increase-click-value:focus, #laboratory:focus, #egg-factory:focus, #hen-house:focus{
+  outline:none;
+}
+
 #increase-click-value{
-  background: #ffd000;
+  background: #ffd519;
 }
 
 #auto-clicker{
   background:#ffaa00;
-
 }
 
 #hen-house{
   background:#ff8800;
 }
 
-
-
 #laboratory{
-  background:#ff6600;
-  
+  background:#ff6600; 
 }
 
 #egg-factory{
@@ -84,11 +121,6 @@ h4{
 button:disabled{
   opacity: 0.5;
   color: black;
-}
-
-#root > div > div > section{
-  float:right;
-  width: 50%;
 }
 
 .background{
@@ -104,7 +136,7 @@ button:disabled{
 }
 
 .click-div{
-  min-width:295px;
+  min-width:300px;
   min-height:500px;
   margin: 0px auto;
 }
@@ -119,12 +151,11 @@ button:disabled{
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  margin-top: 30px;
 }
 
-
-
 .click-button:active{
-  background-size: 80%;
+  height: 420px;
 }
 
 .click-button:focus{
@@ -139,10 +170,10 @@ button:disabled{
 
 .upgrade img{
   height: 50px;
+  width: 45px;
   background: inherit;
   margin: 2px;
 }
-
 
 .level{
   width:10%;
@@ -150,36 +181,30 @@ button:disabled{
   padding: 10px;
 }
 
-/* Tooltip container */
+/*Tooltip*/
 .tool-tip {
   position: relative;
   display: inline-block;
   width: 80%;
 }
 
-/* Tooltip text */
 .tool-tip .tool-tip-text {
   visibility: hidden;
   width: 200px;
-  background-color: #555;
+  background-color: rgb(65, 64, 64);
   color: #fff;
   text-align: center;
   padding: 5px;
   border-radius: 6px;
-
-  /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   bottom: 90%;
-  left: 30%;
+  left: 20%;
   margin-left: -60px;
-
-  /* Fade in tooltip */
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: 0.3s;
 }
 
-/* Tooltip arrow */
 .tool-tip .tool-tip-text::after {
   content: "";
   position: absolute;
@@ -191,12 +216,8 @@ button:disabled{
   border-color: #555 transparent transparent transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tool-tip:hover .tool-tip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.testar{
-  height: 600px;
-}

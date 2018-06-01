@@ -28,8 +28,8 @@ class Autoclicker extends Component {
                 <button id="auto-clicker" disabled={this.props.counter < costButton} onClick={this.autoClicker}>
                     <div className="tool-tip">
                         <h3 className="upgrade">
-                        <img src="./src/images/Cartoon_Robot.png" />
-                        Robot {this.state.costAutoClicker * (this.state.autoClickLevel)} </h3>
+                        <img src={require('../images/Cartoon_Robot.png')} alt="" />
+                        Robot: {this.state.costAutoClicker * (this.state.autoClickLevel)} </h3>
                         <span className="tool-tip-text">A robot inside the hen house picking upp eggs</span>
                     </div>
                     <h4 className="level">{this.state.autoClickLevel -1}</h4>

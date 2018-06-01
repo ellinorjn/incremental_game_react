@@ -26,13 +26,12 @@ class IncreaseClickValue extends Component{
                 <button className="increase-click-button" id="increase-click-value"disabled={this.props.counter < costButton} onClick={this.increaseClickValue}>
                     <div className="tool-tip">
                         <h3 className="upgrade">
-                        
-                            <img src="http://www.clker.com/cliparts/Z/6/B/Y/s/N/pointer-finger-hi.png" />
-                            Cursor {costButton}
-                        
+                            <img src={require('../images/pointer.png')} alt="" />
+                            Cursor: {costButton}
                         </h3>
                         <span className="tool-tip-text">You'll get more eggs on every click on the hen</span>
                     </div>
+                    
                     <h4 className="level">{this.state.increaseLevel -1}</h4>
                 </button>
             </React.Fragment>

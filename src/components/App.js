@@ -15,20 +15,20 @@ class App extends Component {
   }
 
   render() {
-    let loggedInMessage = null;
+    let headerMessage = null;
     if(this.state.loggedIn){
-      loggedInMessage = <h1 className="App-title">Welcome {this.state.username}, let's play!</h1>
+      headerMessage = <h1 className="App-title">Welcome {this.state.username}, let's play!</h1>
+    }else{
+      headerMessage = <h1>Welcome to Egg-Picker!</h1>
     }
     
     return (
       <div className="App">
-        <header className="App-header">
-          { loggedInMessage }
-        </header>
-      <div className="testar">
-        { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}       
+        <header className="App-header">{ headerMessage }</header>
+          <div className="start-page">
+            { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}
+          </div> 
         { this.state.loggedIn && <GameView />}
-        </div>
       </div>
     );
   }
