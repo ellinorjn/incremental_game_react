@@ -17,13 +17,13 @@ class App extends Component {
   render() {
     let loggedInMessage = null;
     if(this.state.loggedIn){
-      loggedInMessage = <p> Welcome {this.state.username}, let's play! </p>
+      loggedInMessage = <h1 className="App-title">Welcome {this.state.username}, let's play!</h1>
     }
     
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">{ loggedInMessage }</h1>
+          { loggedInMessage }
         </header>
       
         { !this.state.loggedIn && <Login handleLogin={this.handleLogin} />}       

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-header {
@@ -10,16 +11,20 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
   float:right;
 }
 
 h2{
   width: 50%;
 }
+h3{
+  font-family: 'Raleway', sans-serif;
+}
 
 h4{
   font-size: 1.4em;
+  font-family: 'Raleway', sans-serif;
 }
 
 .form-group{
@@ -32,7 +37,7 @@ h4{
 
 #auto-clicker, #increase-click-value, #laboratory, #egg-factory, #hen-house{
   float: right;
-  width: 50%;
+  width: 40%;
   height: 100px;
   margin-bottom: 5px;
   border:none;
@@ -76,31 +81,35 @@ button:disabled{
 
 .background{
   background-image:url('http://seminoleelementary.com/wp-content/uploads/2017/06/pics-photos-sunburst-sunburst-background-yellow-sunburst-yellow-6.jpeg');
-  background-size: auto 100%;
+  background-size: auto;
+  background-position: center;
   background-repeat: no-repeat;
   float:left;
-  width: 50%;
+  width: 60%;
+  text-align: center;
+  margin: 0px auto;
+  min-height: 500px;
+}
+
+.click-div{
+  min-width:295px;
+  min-height:500px;
+  margin: 0px auto;
 }
 
 .click-button{
+  min-width:295px;
+  min-height:415px; 
+  padding:0;
   background: inherit;
+  border: none;
   background-image:url(./images/hen.png);
   background-repeat: no-repeat;
-  border: none;
-  padding: 0;
-  width: 100%;
-  height:100%;
+  background-position: center;
   cursor: pointer;
-  
 }
 
-.clickDiv{
-  height: 100vh;
-  width: 50%;
-  text-align:center;
-  margin: 0px auto;
-  
-}
+
 
 .click-button:active{
   background-size: 80%;
