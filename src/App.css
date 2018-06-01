@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -32,6 +33,16 @@ h4{
   margin: 0px auto;
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: #ffcb62;
+  border-color: #ffcb62;
+}
+
+.btn-primary:hover{
+  background-color: #ffab02;
+  border-color: #ffab02;
+}
 
 /* Upgrades */
 
@@ -185,7 +196,6 @@ button:disabled{
   opacity: 1;
 }
 
-
-
-
-
+.testar{
+  background: white;
+}

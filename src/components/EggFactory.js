@@ -29,7 +29,7 @@ class EggFactory extends Component{
             <button disabled={this.props.counter < costButton} id="egg-factory" onClick={this.eggFactory}>
                 <div className="tool-tip">
                     <h3 className="upgrade">
-                    <img src="http://www.clker.com/cliparts/e/b/1/6/11949837601577375107factory_gabrielle_nowick_.svg.hi.png"/>
+                    
                     Factory {this.state.costEggFactory * (this.state.eggFactoryLevel)}</h3>
                     <span className="tool-tip-text">A factory that creates lots of eggs every second</span>
                 </div>

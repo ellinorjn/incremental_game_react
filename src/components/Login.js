@@ -33,24 +33,22 @@ class Login extends Component{
         return(
             <React.Fragment>
                 <LoginInfo />
-            
-
-            <form onSubmit={this.handleSubmit}>
-                <div className={ errorClass }>
-                    <label forhtml="username">Username</label>
-                    <input 
-                        type="text" 
-                        className="form-control" 
-                        id="username" 
-                        placeholder="Username" 
-                        onChange={this.handleUsername}
-                        value={this.state.username}
-                    />
-                    { errorMessage }
-                </div>
-                
-                <button type="submit" className="btn btn-primary">Start game!</button>
-            </form>
+                <form onSubmit={this.handleSubmit}>
+                    <div className={ errorClass }>
+                        <label forhtml="username">Username</label>
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            id="username" 
+                            placeholder="Username" 
+                            onChange={this.handleUsername}
+                            value={this.state.username}
+                        />
+                        { errorMessage }
+                    </div>
+                    
+                    <button type="submit" className="btn btn-primary">Start game!</button>
+                </form>
             </React.Fragment>
         );
     }

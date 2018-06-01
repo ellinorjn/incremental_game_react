@@ -5,7 +5,7 @@ class IncreaseClickValue extends Component{
 
     state = {  
         increaseLevel: 1,
-        costIncreaseClickValue: 10,
+        costIncreaseClickValue: 50,
     }
 
     increaseClickValue = () => {

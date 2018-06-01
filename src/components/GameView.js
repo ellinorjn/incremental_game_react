@@ -7,7 +7,7 @@ import EggFactory from './EggFactory';
 
 class GameView extends Component{
     state={
-        counter: 0
+        counter: 100
     }
 
     handleUpgradeCosts = (cost) => {
@@ -24,7 +24,7 @@ class GameView extends Component{
 
     render(){
         return(
-            <div className=""> 
+            <div className="testar"> 
     
               
 
