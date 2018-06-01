@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class EggFactory extends Component{
 
     state={
-        costEggFactory: 10,
+        costEggFactory: 10000,
         eggFactoryLevel: 1
     }
 
@@ -18,9 +18,9 @@ class EggFactory extends Component{
     eggFactoryInterval = () => {
         clearInterval(this.interval)
         this.interval = setInterval(()=>{
-            let increaseValue = this.state.eggFactoryLevel + 1;
+            let increaseValue = this.state.eggFactoryLevel * 8;
             this.props.handleCounterState(increaseValue)
-        }, 1000)
+        }, 500)
     }
 
     render(){

@@ -48,12 +48,13 @@ h4{
 
 #auto-clicker, #increase-click-value, #laboratory, #egg-factory, #hen-house{
   float: right;
-  width: 40%;
-  height: 100px;
-  margin-bottom: 5px;
-  border:none;
+  width: 39%;
+  height: calc(480px / 5);
+  border: none;
   cursor: pointer;
   text-align:left;
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 #increase-click-value{
@@ -153,7 +154,7 @@ button:disabled{
 .tool-tip {
   position: relative;
   display: inline-block;
-  width: 250px;
+  width: 80%;
 }
 
 /* Tooltip text */
@@ -197,5 +198,5 @@ button:disabled{
 }
 
 .testar{
-  background: white;
+  height: 600px;
 }

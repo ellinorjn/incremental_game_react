@@ -3,24 +3,24 @@ import React, { Component } from 'react'
 class Laboratory extends Component{
 
     state= {
-        costLaboratory: 10,
+        costLaboratory: 5000,
         laboratoryLevel: 1
     }
 
     laboratory = () => {
         let cost = this.state.costLaboratory * (this.state.laboratoryLevel)
         if(this.props.handleUpgradeCosts(cost) === true){
-            this.laboratoryInterval();
             this.setState({laboratoryLevel: this.state.laboratoryLevel + 1})
+            this.laboratoryInterval();
         }
     }
 
     laboratoryInterval = () => {
         clearInterval(this.interval)
         this.interval = setInterval(()=>{
-            let increaseValue = this.state.laboratoryLevel -1;
+            let increaseValue = this.state.laboratoryLevel + 5;
             this.props.handleCounterState(increaseValue)
-        }, 1000);
+        }, 5000);
     }
 
 
